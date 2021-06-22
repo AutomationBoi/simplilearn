@@ -10,6 +10,7 @@ public class locked_me {
 		user_inp=help_obj.get_user_inp();
 		if(user_inp=='l'||user_inp=='L') {
 			System.out.println("List of files present in directory:\n"+help_obj.get_file_names());
+			System.out.println("*************************************************");
 		}
 		}
 	}
