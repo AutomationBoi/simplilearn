@@ -8,6 +8,9 @@ public class locked_me {
 		while (user_inp!='q') {
 		help_obj.welcome_screen();
 		user_inp=help_obj.get_user_inp();
+		if(user_inp=='l'||user_inp=='L') {
+			System.out.println("List of files present in directory:\n"+help_obj.get_file_names());
+		}
 		}
 	}
 

@@ -16,5 +16,20 @@ public class locked_me_helperfunctions {
 		char chr=sc.next().replaceAll("\\s", "").charAt(0);
 		return chr;
 	}
+	public List<String> get_file_names() {
+		List<String> results = new ArrayList<String>();
+
+
+		File[] files = new File("./files_dir").listFiles();
+		//If this pathname does not denote a directory, then listFiles() returns null. 
+
+		for (File file : files) {
+		    if (file.isFile()) {
+		        results.add(file.getName());
+		    }
+		}
+		Collections.sort(results); //sorting in ascending order
+		return results;
+	}
 
 }
