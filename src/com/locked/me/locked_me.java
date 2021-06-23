@@ -10,7 +10,7 @@ public class locked_me {
 		user_inp=help_obj.get_user_inp();
 		//Use to list files
 		if(user_inp=='l'||user_inp=='L') {
-			System.out.println("List of files present in directory:\n"+help_obj.get_file_names());
+			help_obj.get_file_names();
 			System.out.println("*************************************************");
 		}
 		//*******************************
@@ -21,8 +21,27 @@ public class locked_me {
 			help_obj.further_details();
 			System.out.println("*************************************************");
 			user_inp=help_obj.get_user_inp();
+			if(user_inp=='a'||user_inp=='A') {
+				System.out.println("Please Enter the File name to be added.");
+				String filename=help_obj.get_user_file_name();
+				help_obj.add_file(filename);
+				System.out.println("*************************************************");
+			}
+			if(user_inp=='r'||user_inp=='R') {
+				System.out.println("Please Enter the File name to be Removed.");
+				String filename=help_obj.get_user_file_name();
+				help_obj.remove_file(filename);
+				System.out.println("*************************************************");
+			}
+			if(user_inp=='s'||user_inp=='S') {
+				System.out.println("Please Enter the File name to be searched.");
+				String filename=help_obj.get_user_file_name();
+				help_obj.search_file(filename);
+				System.out.println("*************************************************");
+			}
 		}
 		}
+		System.out.println("Program Succesfully exited.");
 	}
 
 }
